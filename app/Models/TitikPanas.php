@@ -19,6 +19,7 @@ class TitikPanas extends Model
         'jenis',
         'long',
         'lat',
+        'status',
         'created_at',
         'updated_at'
     ];

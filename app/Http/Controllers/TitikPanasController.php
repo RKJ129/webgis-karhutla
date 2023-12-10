@@ -53,6 +53,7 @@ class TitikPanasController extends Controller
             'lat' => $request->lat,
             'long' => $request->long,
             'kerusakan' => $request->kerusakan,
+            'status' => $request->status,
         ];
 
         try {
@@ -85,6 +86,7 @@ class TitikPanasController extends Controller
                 'lat' => $request->lat,
                 'long' => $request->long,
                 'kerusakan' => $request->kerusakan,
+                'status' => $request->status,
             ]);
             DB::commit();
             return redirect()->route('index.titikpanas')->with('success', 'Data titik panas berhasil diubah');

@@ -26,14 +26,15 @@
         <!-- Small boxes (Stat box) -->
         <div class="row">
             <div class="col">
-             
+
                 <div class="card">
                     <div class="card-body">
                       <form action="{{ route('store.titikpanas') }}" method="post">
                         @csrf
                         <div class="form-group mb-3">
                           <label for="lokasi_kejadian">Lokasi Kejadian</label>
-                          <textarea type="text" name="lokasi_kejadian" class="form-control rounded-0 @error('lokasi_kejadian') is-invalid @enderror" id="lokasi_kejadian" placeholder="Masukkan lokasi kejadian ... " value="{{ old('lokasi_kejadian') }}" required></textarea>
+                          <input type="text" name="lokasi_kejadian" id="lokasi_kejadian" class="form-control rounded-0 @error('lokasi_kejadian') is-invalid @enderror" placeholder="Masukkan lokasi kejadian ..." value="{{ old('lokasi_kejadian') }}" required>
+                          {{-- <textarea type="text" name="lokasi_kejadian" class="form-control rounded-0 @error('lokasi_kejadian') is-invalid @enderror" id="lokasi_kejadian" placeholder="Masukkan lokasi kejadian ... " value="{{ old('lokasi_kejadian') }}" required></textarea> --}}
                         </div>
                         <div class="row">
                           <div class="col">
@@ -70,6 +71,10 @@
                         <div class="mb-3">
                           <label for="kerusakan" class="form-label">Kerusakan</label>
                           <input type="text" name="kerusakan" class="form-control rounded-0 @error('kerusakan') is-invalid @enderror" id="kerusakan" placeholder="Masukkan jumlah kerusakan ... " value="{{ old('kerusakan') }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="status" class="form-label">Status</label>
+                            <input type="text" name="status" id="status" class="form-control rounded-0 @error('status') is-invalid @enderror" placeholder="Masukkan status..." value="{{ old('status') }}">
                         </div>
                         <button class="btn btn-primary">Simpan</button>
                       </form>

@@ -14,7 +14,7 @@
         <li class="nav-item menu-open">
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="/" class="nav-link">
+              <a href="{{ route('index.dashboard') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Dashboard</p>
               </a>
@@ -25,16 +25,34 @@
                 <p>Kecamatan</p>
               </a>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
               <a href="{{ route('index.kelurahan') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Kelurahan</p>
               </a>
-            </li>
+            </li> --}}
+            {{-- <li class="nav-item">
+              <a href="{{ route('kebakaran.index') }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Kebakaran</p>
+              </a>
+            </li> --}}
             <li class="nav-item">
               <a href="{{ route('index.titikpanas') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Titik Panas</p>
+                <p>Titik Panas & Kebakaran</p>
+              </a>
+            </li>
+            {{-- <li class="nav-item">
+              <a href="{{ route('berita.index') }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Berita</p>
+              </a>
+            </li> --}}
+            <li class="nav-item">
+              <a href="{{ route('logout') }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p class="text-danger">Logout</p>
               </a>
             </li>
           </ul>

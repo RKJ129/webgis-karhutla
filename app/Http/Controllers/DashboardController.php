@@ -19,4 +19,5 @@ class DashboardController extends Controller
             'data_titik' => $data_titik,
         ]);
     }
+
 }
